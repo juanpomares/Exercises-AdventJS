@@ -1,4 +1,4 @@
-# Ejercicio día 2(contar regalos)
+# Ejercicio día 2 (contar regalos)  
 
 Te ha llegado una carta ✉️ con todos los regalos que debes preparar. El tema es que es una cadena de texto y es muy difícil de leer 😱. ¡Menos mal que han puesto cada regalo separado por espacio! (aunque ten cuidado, porque al ser niños, igual han colado más espacios de la cuenta)
 
@@ -11,13 +11,14 @@ Al ejecutar el método debería devolver lo siguiente:
 
 const regalos = listGifts(carta)
 
-console.log(regalos)
-\/*
-{
-  bici: 2,
-  coche: 2,
-  balón: 1,
-  peluche: 1
-}
-\*/
+console.log(regalos)  
+\/*  
+{  
+  bici: 2,  
+  coche: 2,  
+  balón: 1,  
+  peluche: 1  
+}  
+\*/  
+
 Ten en cuenta que los tests pueden ser más exhaustivos... 😝 ¡Cuidado con contar espacios vacíos!
