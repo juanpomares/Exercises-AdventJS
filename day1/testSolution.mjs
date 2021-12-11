@@ -1,3 +1,5 @@
+import contarOvejas from './solution.mjs';
+
 function test1()
 {
 	const ovejas = [
@@ -9,7 +11,7 @@ function test1()
 	
 	const ovejasFiltradas = contarOvejas(ovejas)
 
-ovejasFiltradas_solution= [{ name: 'Navidad', color: 'rojo' },  { name: 'Ki Na Ma', color: 'rojo' }];
+let ovejasFiltradas_solution= [{ name: 'Navidad', color: 'rojo' },  { name: 'Ki Na Ma', color: 'rojo' }];
 	
 	
 	
@@ -17,7 +19,7 @@ ovejasFiltradas_solution= [{ name: 'Navidad', color: 'rojo' },  { name: 'Ki Na M
 }
 
 
-function tests()
+export default function testsDay1()
 {
 	console.log("test1 "+test1());
 }

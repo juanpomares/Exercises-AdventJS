@@ -1,3 +1,6 @@
+import daysToXmas from './solution.mjs';
+
+
 function test1()
 {
 	const date1 = new Date('Dec 1, 2021');
@@ -52,13 +55,13 @@ function test9()
 	return daysToXmas(date9)==-7;
 }
 
-function tests()
+export default function testsDay5()
 {
 	console.log("test1 "+test1());
 	console.log("test2 "+test2());
 	console.log("test3 "+test3());
 	console.log("test4 "+test4());
-	
+
 	console.log("test5 "+test5());
 	console.log("test6 "+test6());
 	console.log("test7 "+test7());

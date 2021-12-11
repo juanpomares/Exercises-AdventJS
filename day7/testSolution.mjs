@@ -1,3 +1,5 @@
+import contains from './solution.mjs';
+
 function test1()
 {
 	const almacen = {
@@ -16,7 +18,7 @@ function test1()
 		}
 	  }
 	}
-				
+
 	return contains(almacen, 'camiseta')==true;
 }
 
@@ -31,11 +33,11 @@ function test2()
 		}
 	  }
 	}
-	  
+
 	return contains(otroAlmacen, 'gameboy')==false;
 }
 
-function tests()
+export default function testsDay7()
 {
 	console.log("test1 "+test1());
 	console.log("test2 "+test2());

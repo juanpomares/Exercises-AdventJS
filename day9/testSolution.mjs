@@ -1,3 +1,5 @@
+import groupBy from './solution.mjs';
+
 
 function test1()
 {
@@ -14,11 +16,11 @@ function test2()
 function test3()
 {
 	let gByAge=groupBy([{age: 23}, {age: 24}], 'age')
-	return gByAge[23].age==23 && gByAge[24].age==24;
+	return gByAge[23][0].age==23 && gByAge[24][0].age==24;
 }
 
 
-function tests()
+export default function testsDay9()
 {
 	console.log("test1 "+test1());
 	console.log("test2 "+test2());

@@ -1,3 +1,5 @@
+import sumPairs from './solution.mjs';
+
 function test1()
 {
 	let solution=sumPairs([3, 5, 7, 2], 10);
@@ -28,11 +30,11 @@ function test5()
 	return solution!=null && solution.length==2 && solution[0]==1 && solution[1]==5;
 }
 
-function tests()
+export default function testsDay6()
 {
 	console.log("test1 "+test1());
 	console.log("test2 "+test2());
 	console.log("test3 "+test3());
-	console.log("test4 "+test4());	
-	console.log("test5 "+test5());	
+	console.log("test4 "+test4());
+	console.log("test5 "+test5());
 }

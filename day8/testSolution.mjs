@@ -1,3 +1,4 @@
+import maxProfit from './solution.mjs';
 
 function test1()
 {
@@ -24,7 +25,7 @@ function test4()
 }
 
 
-function tests()
+export default function testsDay8()
 {
 	console.log("test1 "+test1());
 	console.log("test2 "+test2());

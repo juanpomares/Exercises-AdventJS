@@ -1,3 +1,5 @@
+import isValid from './solution.mjs';
+
 function test1()
 {
 	return isValid("bici coche (balón) bici coche peluche")==true;
@@ -29,7 +31,7 @@ function test6()
 	return isValid("() bici")==false;
 }
 
-function tests()
+export default function testsDay3()
 {
 	console.log("test1 "+test1());
 	console.log("test2 "+test2());
