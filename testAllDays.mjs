@@ -9,6 +9,7 @@ import testsDay8 from "./day8/testSolution.mjs"
 import testsDay9 from "./day9/testSolution.mjs"
 import testsDay10 from "./day10/testSolution.mjs"
 import testsDay11 from "./day11/testSolution.mjs"
+import testsDay12 from "./day12/testSolution.mjs"
 
 console.log("\nDay 1");
 testsDay1();
@@ -42,3 +43,6 @@ testsDay10();
 
 console.log("\nDay 11");
 testsDay11();
+
+console.log("\nDay 12");
+testsDay12();
