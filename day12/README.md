@@ -10,7 +10,8 @@ Encima, el trineo sólo se puede configurar para saltar un número fijo de posic
   
 Necesitamos una función que nos diga la longitud mínima del salto del trineo para ir evitando todos los obstáculos en la ruta.  
   
-```const obstacles = [5, 3, 6, 8, 7]  
+```javascript 
+const obstacles = [5, 3, 6, 8, 7]  
 getMinJump(obstacles) // -> 4  
   
 // S es salto, X es obstáculo  
@@ -40,6 +41,7 @@ S--------------------S---------
 avoidObstacles([1, 2, 3, 5]) // -> 4  
 avoidObstacles([3, 7, 5]) // -> 3  
 avoidObstacles([9, 5, 1]) // -> 2  
-*/´´´  
+*/
+´´´  
 
-La dificultad del reto está en pensar que sólo podemos configurar el salto del trineo una vez y que buscamos el salto mínimo que nos serviría para sortear todos los obstaculos.
+La dificultad del reto está en pensar que sólo podemos configurar el salto del trineo una vez y que buscamos el salto mínimo que nos serviría para sortear todos los obstaculos.  
