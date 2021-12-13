@@ -1,15 +1,16 @@
-import testsDay1 from "./day1/testSolution.mjs"
-import testsDay2 from "./day2/testSolution.mjs"
-import testsDay3 from "./day3/testSolution.mjs"
-import testsDay4 from "./day4/testSolution.mjs"
-import testsDay5 from "./day5/testSolution.mjs"
-import testsDay6 from "./day6/testSolution.mjs"
-import testsDay7 from "./day7/testSolution.mjs"
-import testsDay8 from "./day8/testSolution.mjs"
-import testsDay9 from "./day9/testSolution.mjs"
+import testsDay1 from "./day01/testSolution.mjs"
+import testsDay2 from "./day02/testSolution.mjs"
+import testsDay3 from "./day03/testSolution.mjs"
+import testsDay4 from "./day04/testSolution.mjs"
+import testsDay5 from "./day05/testSolution.mjs"
+import testsDay6 from "./day06/testSolution.mjs"
+import testsDay7 from "./day07/testSolution.mjs"
+import testsDay8 from "./day08/testSolution.mjs"
+import testsDay9 from "./day09/testSolution.mjs"
 import testsDay10 from "./day10/testSolution.mjs"
 import testsDay11 from "./day11/testSolution.mjs"
 import testsDay12 from "./day12/testSolution.mjs"
+import testsDay13 from "./day13/testSolution.mjs"
 
 console.log("\nDay 1");
 testsDay1();
@@ -46,3 +47,6 @@ testsDay11();
 
 console.log("\nDay 12");
 testsDay12();
+
+console.log("\nDay 13");
+testsDay13();
