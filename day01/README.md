@@ -10,8 +10,9 @@ const ovejas = [
   { name: 'Euge', color: 'rojo' },  
   { name: 'Navidad', color: 'rojo' },  
   { name: 'Ki Na Ma', color: 'rojo'}  
-]```  
-
+]
+```    
+ 
 Al ejecutar el método debería devolver lo siguiente:
    
 ```javascript
