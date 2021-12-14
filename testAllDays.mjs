@@ -11,6 +11,7 @@ import testsDay10 from "./day10/testSolution.mjs"
 import testsDay11 from "./day11/testSolution.mjs"
 import testsDay12 from "./day12/testSolution.mjs"
 import testsDay13 from "./day13/testSolution.mjs"
+import testsDay14 from "./day14/testSolution.mjs"
 
 console.log("\nDay 1");
 testsDay1();
@@ -50,3 +51,6 @@ testsDay12();
 
 console.log("\nDay 13");
 testsDay13();
+
+console.log("\nDay 14");
+testsDay14();
