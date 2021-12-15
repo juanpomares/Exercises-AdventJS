@@ -31,7 +31,7 @@ function test6()
 }
 
 
-export default function testsDay13()
+export default function testsDay14()
 {
 	console.log("test1 "+test1());
 	console.log("test2 "+test2());
