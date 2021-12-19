@@ -1,5 +1,29 @@
 export default function learn(maxTime, courses)
 {
+  let result=null;
+  let sumResult=0;
+
+
+  for(let index=0; index<courses.length; index++)
+  {
+    let currentCourseTime=courses[index];
+    for(let index2=index+1; index2<courses.length; index2++)
+    {
+      let otherCourseTime=courses[index2];
+      let sumCurrent=currentCourseTime+otherCourseTime;
+      if(maxTime>=sumCurrent && sumCurrent>sumResult)
+      {
+        sumResult=sumCurrent;
+        result=[index, index2];
+      }
+    }
+  }
+
+  return result;
+}
+
+/*export default function learn(maxTime, courses)
+{
   let CoursesOrdered=[];
 
   for(let index in courses)
@@ -56,4 +80,4 @@ export default function learn(maxTime, courses)
   }else {
     return null;
   }
-}
+}*/
