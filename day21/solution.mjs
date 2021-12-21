@@ -1,6 +1,39 @@
 export default function canCarry(capacity, trip)
 {
   if(trip.length==0) return true;
+  let importantPoints=[];
+
+  for(let index=0; index<trip.length; index++)
+  {
+    let currentTrip=trip[index];
+    let currentCapacity=currentTrip[0];
+    if(currentCapacity>capacity) return false;
+
+    if(importantPoints[currentTrip[1]]==undefined) importantPoints[currentTrip[1]]=0;
+    if(importantPoints[currentTrip[2]]==undefined) importantPoints[currentTrip[2]]=0;
+
+    importantPoints[currentTrip[1]]+=currentCapacity;
+    importantPoints[currentTrip[2]]-=currentCapacity;
+  };
+
+  let currentCapacity=0;
+
+  for(let position=0; position<importantPoints.length; position++)
+  {
+    if(importantPoints[position]!==undefined)
+    {
+      currentCapacity+=importantPoints[position];
+      if(currentCapacity>capacity) return false;
+    }
+  }
+
+  return true;
+}
+/*
+
+export default function canCarry(capacity, trip)
+{
+  if(trip.length==0) return true;
 
   let carryPoints=[];
   let deliveryPoints=[];
@@ -57,3 +90,4 @@ function find(indexInitial, array, valueF)
   }
   return solution;
 }
+*/
