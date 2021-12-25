@@ -4,7 +4,7 @@ export default function canReconfigure(from, to)
 
   if(from!=to)
   {
-    for(let index=0; index<from.length; index++)
+    /*for(let index=0; index<from.length; index++)
     {
       if(from[index]!=to[index])
       {
@@ -17,7 +17,30 @@ export default function canReconfigure(from, to)
             return false;
         }
       }
+    }*/
+
+    let changes=[];
+
+    for(let index=0; index<from.length; index++)
+    {
+      let letterOriginal=from[index];
+      let letterChanged=to[index];
+
+      if(changes[letterOriginal]!==undefined)
+      {
+        if(changes[letterOriginal]!=letterChanged)
+          return false;
+      }else changes[letterOriginal]=letterChanged;
+      
+      if(changes[letterChanged]!==undefined)
+      {
+        if(changes[letterChanged]!=letterOriginal)
+          return false;
+      }else changes[letterChanged]=letterOriginal;
+
     }
+
+
   }
   return true;
 }

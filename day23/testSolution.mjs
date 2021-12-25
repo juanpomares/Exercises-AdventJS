@@ -45,6 +45,10 @@ function test9()
 	return canReconfigure('abcdefghijkl','lkjihgfedcba') == true;
 }
 
+function test10()
+{
+	return canReconfigure('xxxqqqeeefffggg','xxxqqqeeefffggl') == false;
+}
 
 
 
@@ -59,4 +63,5 @@ export default function testsDay23()
 	console.log("test7 "+test7());
 	console.log("test8 "+test8());
 	console.log("test9 "+test9());
+	console.log("test10 "+test10());
 }
