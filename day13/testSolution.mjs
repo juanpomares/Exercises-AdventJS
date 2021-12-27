@@ -10,8 +10,12 @@ function test2()
 	return JSON.stringify(wrapGifts(["🏈🎸","🎮🧸"]))===JSON.stringify([ '******', '*🏈🎸*','*🎮🧸*', '******']);
 }
 
-
 function test3()
+{
+	return JSON.stringify(wrapGifts(["🎮🏈"]))===JSON.stringify([ '******', '*🎮🏈*', '******']);
+}
+
+function test4()
 {
 	return JSON.stringify(wrapGifts(["📷"]))===JSON.stringify(['****','*📷*', '****']);
 }
@@ -22,4 +26,5 @@ export default function testsDay13()
 	console.log("test1 "+test1());
 	console.log("test2 "+test2());
 	console.log("test3 "+test3());
+	console.log("test4 "+test4());
 }

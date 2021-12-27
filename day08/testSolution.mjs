@@ -24,6 +24,21 @@ function test4()
 	return maxProfit(pricesAda) == -1;
 }
 
+function test5()
+{
+ return maxProfit([1,2,3,4])==3;
+}
+
+function test6()
+{
+ return maxProfit([6,5,4,3])==-1;
+}
+
+function test7()
+{
+ return maxProfit([1,1,1])==-1;
+}
+
 
 export default function testsDay8()
 {
@@ -31,4 +46,7 @@ export default function testsDay8()
 	console.log("test2 "+test2());
 	console.log("test3 "+test3());
 	console.log("test4 "+test4());
+	console.log("test5 "+test5());
+	console.log("test6 "+test6());
+	console.log("test7 "+test7());
 }
