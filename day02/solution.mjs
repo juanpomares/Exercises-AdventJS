@@ -1,22 +1,16 @@
 
-export default function listGifts(letter) {
- 
-  let objects={};
-
-  let trozos=letter.split(" ");
-
-  for(let i=0; i<trozos.length; i++)
+export default function listGifts(letter)
+{
+  let words=letter.split(" ");
+  let counterWords=words.reduce((resultObject, currentWord) => 
   {
-    let letterActual=trozos[i];
-    if(letterActual.length>=1 && letterActual.indexOf("_")!=0)
+    if(currentWord.length>=1 && currentWord.indexOf("_")!=0)
     {
-      if(objects[letterActual]===undefined)
-        objects[letterActual]=1;
-      else
-        objects[letterActual]++;
+      resultObject[currentWord]??=0;
+      resultObject[currentWord]++;
     }
+    return resultObject;
+  }, {});
 
-  }
-
- return objects;
+  return counterWords;
 }

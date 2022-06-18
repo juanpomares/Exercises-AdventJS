@@ -1,21 +1,20 @@
 export default function maxProfit(prices)
 {
-  let maxP=-1;
-  let minPrice=prices[0];
+  let initialObject={maxProfit: -1, minPrice: -1};
 
-
-  for(let i=1; i<prices.length; i++)
+  let theResultObject=prices.reduce((resultObject, currentPrice, currentIndex, theArray)=>
   {
-    if(prices[i]<=minPrice)
+    if(currentPrice<=resultObject.minPrice || resultObject.minPrice==-1)
+      resultObject.minPrice=currentPrice;
+    else
     {
-      minPrice=prices[i];
-    }else
-    {
-      let auxProfit=prices[i]-minPrice;
-      if(maxP<auxProfit)
-        maxP=auxProfit;
+      let currentProfit=currentPrice-resultObject.minPrice;
+      if(resultObject.maxProfit<currentProfit)
+        resultObject.maxProfit=currentProfit;
     }
-  }
 
-  return maxP;
+    return resultObject;
+  }, initialObject);
+
+  return theResultObject.maxProfit;
 }

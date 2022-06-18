@@ -1,22 +1,20 @@
 export default function groupBy(collection, it)
 {
-  let res={};
+  let result=collection.reduce((objectResult, currentObject)=>
+  {
+    let key="";
+    if(typeof it === "function")
+      key=it(currentObject);
+    else
+      key=currentObject[it];
 
-    for(let i=0; i<collection.length; i++)
+    if(!objectResult.hasOwnProperty(key))
     {
-      let actual=collection[i];
-      let clave;
-      if(typeof it === "function")
-        clave=it(collection[i]);
-      else
-        clave=collection[i][it];
+      objectResult[key]=[currentObject];
+    }else
+      objectResult[key].push(currentObject);
 
-      if(!res.hasOwnProperty(clave))
-      {
-        res[clave]=[actual];
-      }else
-         res[clave].push(actual);
-    }
-
-  return res;
+    return objectResult;
+  }, {});
+  return result;
 }

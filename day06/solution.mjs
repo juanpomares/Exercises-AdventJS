@@ -1,14 +1,23 @@
 export default function sumPairs(numbers, result) 
 {
-  for(let i=0; i<numbers.length; i++)
+  let initialArrayObject={FirstNumber: -1, SecondNumber: -1, result: result};
+
+  let objectResult=numbers.reduce((arrayObject,currentNumber, currentIndex, theArray) => 
   {
-    let numeroActual=numbers[i];
-    let numeroBuscar=result-numeroActual;
-    for(let j=i+1; j<numbers.length; j++)
+    if(arrayObject.FirstNumber==-1)
     {
-      if(numeroBuscar==numbers[j])
-        return [numeroActual, numeroBuscar];
+      let numberFind=arrayObject.result-currentNumber;
+      if(theArray.indexOf(numberFind, currentIndex+1)!=-1)
+      {
+        arrayObject.FirstNumber=currentNumber;
+        arrayObject.SecondNumber=numberFind;
+      }
     }
-  }
-  return null;
+    return arrayObject;
+  }, initialArrayObject);
+
+  if(objectResult.FirstNumber!=-1)
+    return [objectResult.FirstNumber, objectResult.SecondNumber];
+  else 
+    return null;
 }
